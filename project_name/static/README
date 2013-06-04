@@ -1,0 +1,10 @@
+This directory is used to store static assets for your project. User media files
+(FileFields/ImageFields) are not stored here.
+
+The convention for this directory is:
+
+ * bootstrap/ — a semi-clone of the bootstrap repo
+ * symposion/ — symposion specific LESS styles and built css
+ 
+This directory is accessed at /site_media/static/ in runserver when SERVE_MEDIA
+is True. It is built with build_static for production environments.

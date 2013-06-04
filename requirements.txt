@@ -1,0 +1,23 @@
+# base.txt is a pip requirements file which describes the necessary
+# distributions required to run this project. If you need something that is
+# project specific not listed here use project.txt. You can, of course, update
+# versions of distributions here if needed.
+
+Django==1.4.5
+django-user-accounts==1.0b13
+symposion==1.0b1
+pinax-theme-bootstrap==3.0a9
+metron==1.1
+django-debug-toolbar==0.9.4
+django-timezones==0.2
+pytz==2013b
+django-model-utils==1.1.0
+
+django-taggit==0.9.3
+django-reversion==1.7
+django-markitup==1.0.0
+markdown==2.3.1
+django-sitetree==0.9.4
+PIL==1.1.7
+easy-thumbnails==1.2
+html5lib==0.95
