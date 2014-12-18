@@ -2,7 +2,7 @@
 
 {% load i18n %}
 {% load markitup_tags %}
-{% load bootstrap_tags %}
+{% load bootstrap %}
 {% load account_tags %}
 
 {% block extra_style %}
@@ -25,9 +25,9 @@
                         <a class="btn dropdown-toggle btn-success" data-toggle="dropdown" href="#">Accepted <span class="caret"></span></a>
                         <div class="dropdown-menu pull-right" style="width: 200px; padding-left: 10px;">
                             <div class="btn-group">
-                                <input type="submit" name="result_submit" value="reject" class="btn btn-mini btn-danger" />
-                                <input type="submit" name="result_submit" value="standby" class="btn btn-mini" />
-                                <input type="submit" name="result_submit" value="undecide" class="btn btn-mini" />
+                                <input type="submit" name="result_submit" value="reject" class="btn btn-xs btn-danger" />
+                                <input type="submit" name="result_submit" value="standby" class="btn btn-xs" />
+                                <input type="submit" name="result_submit" value="undecide" class="btn btn-default btn-xs" />
                             </div>
                         </div>
                     {% else %}
@@ -35,9 +35,9 @@
                             <a class="btn dropdown-toggle btn-danger" data-toggle="dropdown" href="#">Rejected <span class="caret"></span></a>
                             <div class="dropdown-menu pull-right" style="width: 200px; padding-left: 10px;">
                                 <div class="btn-group">
-                                    <input type="submit" name="result_submit" value="accept" class="btn btn-mini btn-success" />
-                                    <input type="submit" name="result_submit" value="standby" class="btn btn-mini" />
-                                    <input type="submit" name="result_submit" value="undecide" class="btn btn-mini" />
+                                    <input type="submit" name="result_submit" value="accept" class="btn btn-xs btn-success" />
+                                    <input type="submit" name="result_submit" value="standby" class="btn btn-xs" />
+                                    <input type="submit" name="result_submit" value="undecide" class="btn btn-default btn-xs" />
                                 </div>
                             </div>
                         {% else %}
@@ -45,18 +45,18 @@
                                 <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">Standby <span class="caret"></span></a>
                                 <div class="dropdown-menu pull-right" style="width: 200px; padding-left: 10px;">
                                     <div class="btn-group">
-                                        <input type="submit" name="result_submit" value="accept" class="btn btn-mini btn-success" />
-                                        <input type="submit" name="result_submit" value="reject" class="btn btn-mini btn-danger" />
-                                        <input type="submit" name="result_submit" value="undecide" class="btn btn-mini" />
+                                        <input type="submit" name="result_submit" value="accept" class="btn btn-xs btn-success" />
+                                        <input type="submit" name="result_submit" value="reject" class="btn btn-xs btn-danger" />
+                                        <input type="submit" name="result_submit" value="undecide" class="btn btn-default btn-xs" />
                                     </div>
                                 </div>
                             {% else %}
                                 <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">Undecided <span class="caret"></span></a>
                                 <div class="dropdown-menu pull-right" style="width: 200px; padding-left: 10px;">
                                     <div class="btn-group">
-                                        <input type="submit" name="result_submit" value="accept" class="btn btn-mini btn-success" />
-                                        <input type="submit" name="result_submit" value="reject" class="btn btn-mini btn-danger" />
-                                        <input type="submit" name="result_submit" value="standby" class="btn btn-mini" />
+                                        <input type="submit" name="result_submit" value="accept" class="btn btn-xs btn-success" />
+                                        <input type="submit" name="result_submit" value="reject" class="btn btn-xs btn-danger" />
+                                        <input type="submit" name="result_submit" value="standby" class="btn btn-default btn-xs" />
                                     </div>
                                 </div>
                             {% endif %}
@@ -66,9 +66,9 @@
             </form>
         </div>
     {% endif %}
-    
+
     <h3>#{{ proposal.number }}: {{ proposal.title }} ({{ proposal.speaker }})</h3>
-    
+
     <div class="tabbable">
         <ul class="nav nav-tabs">
             <li class="active"><a href="#proposal-detail" data-toggle="tab">{% trans "Proposal Details" %}</a></li>
@@ -80,7 +80,7 @@
                 {% include "proposals/_proposal_fields.html" %}
             </div>
             <div class="tab-pane" id="proposal-reviews">
-                
+
                 <h4>{% trans "Current Results" %}</h4>
                 <table class="table table-striped">
                     <thead>
@@ -100,15 +100,15 @@
                         </tr>
                     </tbody>
                 </table>
-                
+
                 <hr />
-                
+
                 {% if review_form %}
                     <form method="POST" action="" class="review-form">
                         <legend>{% trans "Submit Review" %}</legend>
                         <p>Enter your vote and any comment to go along with it. You can revise your vote or comment multiple times with an existing vote (your previously recorded score will be replaced during calculations). <b>Your vote and comments are not public and will only be viewable by other reviewers.</b></p>
                         {% csrf_token %}
-                            {{ review_form|as_bootstrap }}
+                            {{ review_form|bootstrap }}
                             <div class="form-action">
                                 <input type="submit" class="btn btn-primary" name="vote_submit" value="Submit Review" />
                             </div>
@@ -126,9 +126,9 @@
                             </div>
                             {% if is_manager %}
                                 <div class="pull-right">
-                                    <form class="form-inline" action="{% url review_delete review.id %}" method="POST">
+                                    <form class="form-inline" action="{% url "review_delete" review.id %}" method="POST">
                                         {% csrf_token %}
-                                        <button class="btn btn-mini btn-danger" type="submit">Delete</button>
+                                        <button class="btn btn-xs btn-danger" type="submit">Delete</button>
                                     </form>
                                 </div>
                             {% endif %}
@@ -157,7 +157,7 @@
                     {% endfor %}
                     <hr />
                 {% endif %}
-                
+
                 <form action="" method="POST"accept-charset="utf-8">
                     <legend>{% trans "Send a message" %}</legend>
                     <p>
@@ -167,7 +167,7 @@
                         {% endblocktrans %}
                     </p>
                     {% csrf_token %}
-                    {{ message_form|as_bootstrap }}
+                    {{ message_form|bootstrap }}
                     <div class="form-actions">
                         <input type="submit" class="btn btn-primary" name="message_submit" value="Send Message" />
                     </div>
@@ -182,11 +182,11 @@
     <script type="text/javascript">
         $(function() {
             var History = window.History;
-            
+
             $(window).bind("anchorchange", function() {
                 $(".nav-tabs a[href='" + location.hash + "']").click();
             });
-            
+
             $('#.nav-tabs a[data-toggle="tab"]').on('shown', function (e) {
                 if (History.enabled) {
                     History.pushState(null, null, $(e.target).attr("href"));
@@ -194,5 +194,5 @@
             });
         });
     </script>
-    
+
 {% endblock %}

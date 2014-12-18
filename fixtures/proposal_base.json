@@ -1,7 +1,7 @@
 [
     {
         "pk": 1, 
-        "model": "proposals.proposalsection", 
+        "model": "symposion_proposals.proposalsection", 
         "fields": {
             "start": null, 
             "section": 1, 
@@ -12,7 +12,7 @@
     }, 
     {
         "pk": 2, 
-        "model": "proposals.proposalsection", 
+        "model": "symposion_proposals.proposalsection", 
         "fields": {
             "start": null, 
             "section": 2, 
@@ -23,7 +23,7 @@
     }, 
     {
         "pk": 1, 
-        "model": "proposals.proposalkind", 
+        "model": "symposion_proposals.proposalkind", 
         "fields": {
             "section": 1, 
             "name": "tutorial", 
@@ -32,7 +32,7 @@
     }, 
     {
         "pk": 2, 
-        "model": "proposals.proposalkind", 
+        "model": "symposion_proposals.proposalkind", 
         "fields": {
             "section": 2, 
             "name": "talk", 

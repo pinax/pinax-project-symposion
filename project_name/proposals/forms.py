@@ -6,7 +6,7 @@ from .models import TalkProposal, TutorialProposal
 
 
 class ProposalForm(forms.ModelForm):
-    
+
     def clean_description(self):
         value = self.cleaned_data["description"]
         if len(value) > 400:

@@ -1,0 +1,28 @@
+{% extends "site_base.html" %}
+
+{% load bootstrap %}
+{% load i18n %}
+{% load boxes_tags %}
+
+{% block head_title %}{% trans "Apply to be a Sponsor" %}{% endblock %}
+
+{% block body_class %}sponsorships{% endblock %}
+
+{% block body %}
+
+    {% box "sponsorship-apply" %}
+
+    <form method="POST" action="" class="form-horizontal">
+        {% csrf_token %}
+        <legend>{% trans "Apply to Be a Sponsor" %}</legend>
+        {{ form|bootstrap_horizontal }}
+        <div class="form-actions">
+            <input class="btn btn-primary" type="submit" value="Apply" />
+            <a class="btn btn-default" href="{% url "dashboard" %}">Cancel</a>
+            <p class="help-block">
+                <small>By submitting this sponsor application you are agreeing to the <a href="{% url "cms_page" "sponsor/terms/" %}" target="_blank">terms and conditions</a>.</small>
+            </p>
+        </div>
+    </form>
+
+{% endblock %}

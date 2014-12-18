@@ -5,20 +5,20 @@
         <th>#</th>
         <th>{% trans "Speaker / Title" %}</th>
         <th>{% trans "Category" %}</th>
-        <th><i class="icon-comment-alt"></i></th>
+        <th><i class="fa fa-comment-alt"></i></th>
         <th>{% trans "+1" %}</th>
         <th>{% trans "+0" %}</th>
         <th>{% trans "-0" %}</th>
         <th>{% trans "-1" %}</th>
-        <th><a href="#" class="tip" title="{% trans "Your Rating" %}"><i class="icon-user"></i></a></th>
+        <th><a href="#" class="tip" title="{% trans "Your Rating" %}"><i class="fa fa-user"></i></a></th>
     </thead>
-    
+
     <tbody>
         {% for proposal in proposals %}
             <tr class="{{ proposal.user_vote_css }}">
                 <td>{{ proposal.number }}</td>
                 <td>
-                    <a href="{% url review_detail proposal.pk %}">
+                    <a href="{% url "review_detail" proposal.pk %}">
                         <small><strong>{{ proposal.speaker }}</strong></small>
                         <br />
                         {{ proposal.title }}

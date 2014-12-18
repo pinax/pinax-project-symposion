@@ -52,7 +52,7 @@
 
 {% block body_outer %}
     <div class="row">
-        <div class="span2">
+        <div class="col-md-2">
             {% block sidebar %}
                 <ul class="nav nav-list well">
                     {% for section in review_sections %}
@@ -60,32 +60,32 @@
                             {{ section }}
                         </li>
                         <li>
-                            <a href="{% url review_section section.section.slug %}">
+                            <a href="{% url "review_section" section.section.slug %}">
                                 {% trans "All Reviews" %}
                             </a>
                         </li>
                         {% comment %}
                         <li>
-                            <a href="{% url review_section_assignments section.section.slug %}">
+                            <a href="{% url "review_section_assignments" section.section.slug %}">
                                 {% trans "Your Assignments" %}
                             </a>
                         </li>
                         {% endcomment %}
                         <li>
-                            <a href="{% url review_status section.section.slug %}">
+                            <a href="{% url "review_status" section.section.slug %}">
                                 {% trans "Voting Status" %}
                             </a>
                         </li>
                         {% if request.user.is_staff %}
                             <li>
-                                <a href="{% url result_notification section.section.slug 'accepted' %}">Result Notification</a>
+                                <a href="{% url "result_notification" section.section.slug 'accepted' %}">Result Notification</a>
                             </li>
                         {% endif %}
                     {% endfor %}
                 </ul>
             {% endblock %}
         </div>
-        <div class="span10">
+        <div class="col-md-10">
             {% block body %}
             {% endblock %}
         </div>
@@ -100,7 +100,7 @@
         $(function() {
             $(".tip").tooltip();
             $("table.table-reviews").dataTable({
-                "sDom": "<'row'<'span3'l><'span3'T><'span4'f>r>t<'row'<'span3'i><'span5'p>>",
+                "sDom": "<'row'<'col-md-3'l><'col-md-3'T><'col-md-4'f>r>t<'row'<'col-md-3'i><'col-md-5'p>>",
                 "sPaginationType": "bootstrap",
                 "bStateSave": true,
                 "oTableTools": {

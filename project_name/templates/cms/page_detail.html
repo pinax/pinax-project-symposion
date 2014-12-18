@@ -1,0 +1,24 @@
+{% extends "site_base.html" %}
+
+{% load sitetree %}
+{% load i18n %}
+
+{% block body_class %}cms-page{% endblock %}
+
+{% block head_title %}{{ page.title }}{% endblock %}
+
+{% block breadcrumbs %}{% sitetree_breadcrumbs from "main" %}{% endblock %}
+
+{% block body %}
+    {% if editable %}
+        <div class="pull-right">
+            <a href="{% url 'cms_page_edit' page.path %}" class="btn btn-default"><i class="fa fa-pencil fa-2x"></i> Edit this page</a>
+        </div>
+    {% endif %}
+    <h2>{{ page.title }}</h2>
+    
+    <div class="page-content">
+        {{ page.body }}
+    </div>
+    
+{% endblock %}

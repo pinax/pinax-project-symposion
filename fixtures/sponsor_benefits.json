@@ -1,7 +1,7 @@
 [
     {
         "pk": 2, 
-        "model": "sponsorship.benefit", 
+        "model": "symposion_sponsorship.benefit", 
         "fields": {
             "type": "weblogo", 
             "name": "Web Logo", 
@@ -10,7 +10,7 @@
     }, 
     {
         "pk": 3, 
-        "model": "sponsorship.benefit", 
+        "model": "symposion_sponsorship.benefit", 
         "fields": {
             "type": "file", 
             "name": "Print Logo", 
@@ -19,7 +19,7 @@
     }, 
     {
         "pk": 4, 
-        "model": "sponsorship.benefit", 
+        "model": "symposion_sponsorship.benefit", 
         "fields": {
             "type": "text", 
             "name": "Sponsor Description", 
@@ -28,7 +28,7 @@
     }, 
     {
         "pk": 9, 
-        "model": "sponsorship.benefitlevel", 
+        "model": "symposion_sponsorship.benefitlevel", 
         "fields": {
             "other_limits": "", 
             "benefit": 4, 
@@ -38,7 +38,7 @@
     }, 
     {
         "pk": 5, 
-        "model": "sponsorship.benefitlevel", 
+        "model": "symposion_sponsorship.benefitlevel", 
         "fields": {
             "other_limits": "", 
             "benefit": 3, 
@@ -48,7 +48,7 @@
     }, 
     {
         "pk": 1, 
-        "model": "sponsorship.benefitlevel", 
+        "model": "symposion_sponsorship.benefitlevel", 
         "fields": {
             "other_limits": "", 
             "benefit": 2, 
@@ -58,7 +58,7 @@
     }, 
     {
         "pk": 10, 
-        "model": "sponsorship.benefitlevel", 
+        "model": "symposion_sponsorship.benefitlevel", 
         "fields": {
             "other_limits": "", 
             "benefit": 4, 
@@ -68,7 +68,7 @@
     }, 
     {
         "pk": 6, 
-        "model": "sponsorship.benefitlevel", 
+        "model": "symposion_sponsorship.benefitlevel", 
         "fields": {
             "other_limits": "", 
             "benefit": 3, 
@@ -78,7 +78,7 @@
     }, 
     {
         "pk": 2, 
-        "model": "sponsorship.benefitlevel", 
+        "model": "symposion_sponsorship.benefitlevel", 
         "fields": {
             "other_limits": "", 
             "benefit": 2, 
@@ -88,7 +88,7 @@
     }, 
     {
         "pk": 11, 
-        "model": "sponsorship.benefitlevel", 
+        "model": "symposion_sponsorship.benefitlevel", 
         "fields": {
             "other_limits": "", 
             "benefit": 4, 
@@ -98,7 +98,7 @@
     }, 
     {
         "pk": 7, 
-        "model": "sponsorship.benefitlevel", 
+        "model": "symposion_sponsorship.benefitlevel", 
         "fields": {
             "other_limits": "", 
             "benefit": 3, 
@@ -108,7 +108,7 @@
     }, 
     {
         "pk": 3, 
-        "model": "sponsorship.benefitlevel", 
+        "model": "symposion_sponsorship.benefitlevel", 
         "fields": {
             "other_limits": "", 
             "benefit": 2, 

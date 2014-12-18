@@ -1,7 +1,7 @@
 [
     {
         "pk": 1, 
-        "model": "conference.conference", 
+        "model": "symposion_conference.conference", 
         "fields": {
             "timezone": "US/Eastern", 
             "start_date": "2040-01-01", 
@@ -11,7 +11,7 @@
     }, 
     {
         "pk": 1, 
-        "model": "conference.section", 
+        "model": "symposion_conference.section", 
         "fields": {
             "conference": 1, 
             "start_date": "2040-01-01", 
@@ -22,7 +22,7 @@
     }, 
     {
         "pk": 2, 
-        "model": "conference.section", 
+        "model": "symposion_conference.section", 
         "fields": {
             "conference": 1, 
             "start_date": "2040-01-02", 
