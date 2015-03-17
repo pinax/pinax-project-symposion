@@ -2,6 +2,7 @@
 
 {% load i18n %}
 {% load account_tags %}
+{% load bootstrap %}
 
 {% block head_title %}{{ proposal.title }}{% endblock %}
 
@@ -62,7 +63,7 @@
                     {% else %}
                         <p>{% trans 'No supporting documents attached to this proposal.' %}</p>
                     {% endif %}
-                    <a class="btn btn-sm{% if proposal.cancelled %} btn-disabled{% endif %}" href="{% url proposal_document_create proposal.pk %}"><i class="fa fa-upload"></i> {% trans 'Add Document' %}</a>
+                    <a class="btn btn-sm{% if proposal.cancelled %} btn-disabled{% endif %}" href="{% url "proposal_document_create" proposal.pk %}"><i class="fa fa-upload"></i> {% trans 'Add Document' %}</a>
                 </div>
             {% endif %}
 
