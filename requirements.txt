@@ -14,7 +14,7 @@ markdown==2.5.2
 django-sitetree==1.2.1
 Pillow==2.6.1
 easy-thumbnails==2.2
-html5lib==0.999
+html5lib==0.95
 
 # @@@ Pin this once we get to stable release
 git+git://github.com/pinax/symposion.git#egg=symposion
