@@ -1,8 +1,10 @@
 {% load account_tags %}
+{% load i18n %}
+{% user_display user as username %}
 <p>
-    <b>{% user_display user %}</b> has made changes to <b>{{ proposal.title }}</b> which you have previously reviewed or commented on.
+  {% blocktrans with title=proposal.title %}<b>{{ username }}</b> has made changes to <b>{{ title }}</b> which you have previously reviewed or commented on.{% endblocktrans %}
 </p>
 <p>
-    {% url "review_detail" proposal.pk as detail_url %}
-    View the latest version of the proposal online at <a href="http://{{ current_site }}{{ detail_url }}">http://{{ current_site }}{{ detail_url }}</a>
+    {% url 'review_detail' proposal.pk as detail_url %}
+    {% blocktrans %}View the latest version of the proposal online at <a href="http://{{ current_site }}{{ detail_url }}">http://{{ current_site }}{{ detail_url }}</a>{% endblocktrans %}
 </p>

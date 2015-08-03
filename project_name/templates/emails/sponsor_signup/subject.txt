@@ -1,1 +1,1 @@
-New Sponsor Application
+{% load i18n %}{% trans "New Sponsor Application" %}

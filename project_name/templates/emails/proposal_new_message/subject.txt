@@ -1,1 +1,1 @@
-{% load account_tags %}New message on "{{ proposal.title }}" from {% user_display message.user %}
+{% load account_tags i18n %}{% user_display message.user as user %}{% blocktrans with title=proposal.title %}New message on "{{ title }}" from {{ user }}{% endblocktrans %}

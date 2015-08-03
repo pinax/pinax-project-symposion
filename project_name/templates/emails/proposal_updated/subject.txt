@@ -1,1 +1,1 @@
-{% load account_tags %}"{{ proposal.title }}" has been updated by {% user_display user %}
+{% load account_tags i18n %}{% user_display user as username %}{% blocktrans with title=proposal.title %}"{{ title }}" has been updated by {{ username }}{% endblocktrans %}
