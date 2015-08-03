@@ -12,7 +12,7 @@ EMAIL_DEBUG = DEBUG
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.sqlite3",
-        "NAME": "dev.db",
+        "NAME": os.path.join(PROJECT_ROOT, "dev.db"),
     }
 }
 

@@ -16,6 +16,7 @@
 
 
 {% block extra_head_base %}
+    <script src="{% block jquery_src %}{% static "jquery/js/jquery-2.1.1.min.js" %}{% endblock %}"></script>
     {% block extra_head %}{% endblock %}
 {% endblock %}
 
@@ -67,7 +68,6 @@
 
 
 {% block script_base %}
-    <script src="{% block jquery_src %}{% static "jquery/js/jquery-2.1.1.min.js" %}{% endblock %}"></script>
     <script src="{% static "js/bootstrap.min.js" %}"></script>
     <script src="{% static "pinax/js/theme.js" %}"></script>
     {% markitup_media "no-jquery" %}
