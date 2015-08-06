@@ -1,6 +1,8 @@
 pinax-project-symposion
 =====================
 
+[![Join us on Slack](http://slack.pinaxproject.com/badge.svg)](http://slack.pinaxproject.com/)
+
 a starter project demonstarting a minimal symposion instance
 
 
