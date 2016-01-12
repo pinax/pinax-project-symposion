@@ -5,6 +5,7 @@ from django.views.generic import TemplateView
 
 from django.contrib import admin
 
+import account.views
 import symposion.views
 
 
@@ -16,8 +17,8 @@ urlpatterns = patterns(
     url(r"^$", TemplateView.as_view(template_name="homepage.html"), name="home"),
     url(r"^admin/", include(admin.site.urls)),
 
-    url(r"^account/signup/$", symposion.views.SignupView.as_view(), name="account_signup"),
-    url(r"^account/login/$", symposion.views.LoginView.as_view(), name="account_login"),
+    url(r"^account/signup/$", account.views.SignupView.as_view(), name="account_signup"),
+    url(r"^account/login/$", account.views.LoginView.as_view(), name="account_login"),
     url(r"^account/", include("account.urls")),
     url(r"^boxes/", include("pinax.boxes.urls")),
 
