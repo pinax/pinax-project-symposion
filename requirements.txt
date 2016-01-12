@@ -21,6 +21,7 @@ eventlog==0.8.0
 django-jsonfield==0.9.13
 django-timezones==0.2
 django-markitup==2.2.2
+git+https://github.com/pinax/pinax-boxes.git
 
 # @@@ Pin this once we get to stable release
 -e git+https://github.com/pinax/symposion.git@46a10b9e3ae6b1f6cc7d1648d6529fbab3201e9b#egg=symposion-master

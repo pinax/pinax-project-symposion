@@ -138,6 +138,7 @@ INSTALLED_APPS = [
 
     # external
     "account",
+    "pinax.boxes",
     "easy_thumbnails",
     "eventlog",
     "markitup",
@@ -149,8 +150,7 @@ INSTALLED_APPS = [
 
     # symposion
     "symposion",
-    "symposion.boxes",
-    "symposion.cms",
+    # "symposion.cms",
     "symposion.conference",
     "symposion.proposals",
     "symposion.reviews",
