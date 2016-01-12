@@ -1,20 +1,26 @@
-Django==1.7.1
+## symposion @46a10b9 has the following requirements
+# Django==1.8.5
+# django-appconf==1.0.1
+# django-model-utils==2.3.1
+# django-reversion==1.9.3
+# django-sitetree==1.4.0
+# django-taggit==0.17.1
+# django-timezone-field==1.3
+# django-user-accounts==1.2.0
+# easy-thumbnails==2.2
+# html5lib==0.9999999
+# Markdown==2.6.2
+# Pillow==3.1.0
+# pytz==2015.6
+# six==1.10.0
+
+# additional requirements
 pinax-theme-bootstrap==5.6.0
-django-user-accounts==1.0
 metron==1.3.5
 eventlog==0.8.0
 django-jsonfield==0.9.13
 django-timezones==0.2
-pytz==2014.10
-django-model-utils==2.2
-django-taggit==0.12.2
-django-reversion==1.8.5
 django-markitup==2.2.2
-markdown==2.5.2
-django-sitetree==1.2.1
-Pillow==2.6.1
-easy-thumbnails==2.2
-html5lib==0.95
 
 # @@@ Pin this once we get to stable release
-git+git://github.com/pinax/symposion.git#egg=symposion
+-e git+https://github.com/pinax/symposion.git@46a10b9e3ae6b1f6cc7d1648d6529fbab3201e9b#egg=symposion-master
