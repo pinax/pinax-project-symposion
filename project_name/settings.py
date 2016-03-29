@@ -138,6 +138,7 @@ INSTALLED_APPS = [
 
     # external
     "account",
+    "pinax.boxes",
     "easy_thumbnails",
     "eventlog",
     "markitup",
@@ -149,8 +150,7 @@ INSTALLED_APPS = [
 
     # symposion
     "symposion",
-    "symposion.boxes",
-    "symposion.cms",
+    # "symposion.cms",
     "symposion.conference",
     "symposion.proposals",
     "symposion.reviews",
@@ -209,6 +209,8 @@ ACCOUNT_EMAIL_CONFIRMATION_EXPIRE_DAYS = 2
 ACCOUNT_USER_DISPLAY = lambda user: user.email
 
 AUTHENTICATION_BACKENDS = [
+    "django.contrib.auth.backends.ModelBackend",
+
     # Permissions Backends
     "symposion.teams.backends.TeamPermissionsBackend",
 
